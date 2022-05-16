@@ -1,0 +1,82 @@
+html {
+  scroll-behavior: smooth;
+  background: $color-light-xl;
+}
+
+.page {
+  &.page-shadow:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(41, 41, 41, 0.6);
+    cursor: pointer;
+  }
+}
+
+*,
+*:before,
+*:after {
+  font-family: "Georgia Regular", sans-serif;
+  letter-spacing: $spacing;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin: 0 40px;
+  @media screen and (max-width: $content-width) {
+    margin: 0 30px;
+  }
+  @media screen and (max-width: $tablet-width) {
+    margin: 0 10px;
+  }
+}
+
+.logo {
+  &__title {
+    color: $color-primary;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    @include flex("", center);
+    color: $color-light-xl;
+    padding-left: 4px;
+  }
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.shadow {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(41, 41, 41, 0.6);
+  cursor: pointer;
+}

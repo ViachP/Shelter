@@ -1,0 +1,448 @@
+.header .nav-menu__item_active, .header .nav-menu__item:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 10px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, .switch.switch-slider, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@font-face {
+  font-family: "Georgia Regular";
+  src: url("../assets/fonts/Georgia.eot");
+  src: url("../assets/fonts/Georgia.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Georgia.woff") format("woff"), url("../assets/fonts/Georgia.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../assets/fonts/Arial-ItalicMT.eot");
+  src: local("Arial Italic"), local("Arial-ItalicMT"), url("../assets/fonts/Arial-ItalicMT.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Arial-ItalicMT.woff") format("woff"), url("../assets/fonts/Arial-ItalicMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("../assets/fonts/ArialMT.eot");
+  src: local("Arial"), local("ArialMT"), url("../assets/fonts/ArialMT.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/ArialMT.woff") format("woff"), url("../assets/fonts/ArialMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  color: #c4c4c4;
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
+}
+
+h3 {
+  color: #545454;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 45px;
+}
+
+@media screen and (max-width: 767.5px) {
+  .h3-mobile {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 130%;
+    text-align: center;
+  }
+}
+
+h4, .switch.switch-slider {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 115%;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 110%;
+}
+
+.h5-modal-window {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 110%;
+}
+
+.paragraph-l {
+  font-family: Arial, sans-serif;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 160%;
+}
+
+@media screen and (max-width: 500px) {
+  .paragraph-l {
+    text-align: center;
+  }
+}
+
+.paragraph-s {
+  font-family: "Arial", sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 767.5px) {
+  .paragraph-mobile-menu {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 160%;
+    font-family: "Arial", sans-serif;
+  }
+}
+
+.logo__title {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 110%;
+}
+
+.logo__subtitle {
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .credit-card {
+    font-size: 15px;
+    line-height: 110%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .help__item-title {
+    font-size: 15px;
+    line-height: 110%;
+  }
+}
+
+@media screen and (max-width: 1279.5px) {
+  .pets-card__description {
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 110%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #ffffff;
+}
+
+.page.page-shadow:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: inherit;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(41, 41, 41, 0.6);
+  cursor: pointer;
+}
+
+*, *:before, *:after {
+  font-family: "Georgia Regular", sans-serif;
+  letter-spacing: 0.06em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin: 0 40px;
+}
+
+@media screen and (max-width: 1279.5px) {
+  .wrapper {
+    margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .wrapper {
+    margin: 0 10px;
+  }
+}
+
+.logo__title {
+  color: #f1cdb3;
+  margin-bottom: 10px;
+}
+
+.logo__subtitle {
+  display: flex;
+  justify-content: "";
+  align-items: center;
+  gap: 0px;
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.shadow {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(41, 41, 41, 0.6);
+  cursor: pointer;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  max-width: 1200px;
+  width: calc(100% - 60px);
+  margin: 60px 0 0 40px;
+  color: #cdcdcd;
+}
+
+@media screen and (max-width: 767.5px) {
+  .header {
+    width: calc(100% - 63px);
+  }
+}
+
+.header .burger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    margin: 30px 0 30px 30px;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .header .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    z-index: 50;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .header .burger span, .header .burger:before, .header .burger:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f1cdb3;
+    transition: all 0.3s ease-in-out;
+  }
+  .header .burger span {
+    left: 0;
+    top: 10px;
+  }
+  .header .burger:before, .header .burger:after {
+    content: "";
+  }
+  .header .burger:before {
+    top: 0;
+  }
+  .header .burger:after {
+    bottom: 0;
+  }
+  .header .burger:hover:before {
+    top: 2px;
+  }
+  .header .burger:hover:after {
+    bottom: 2px;
+  }
+  .header .burger_open {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    margin: 30px 0 30px 10px;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .header .nav-menu {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    right: -100%;
+    max-width: 320px;
+    width: 100%;
+    height: 100%;
+    background: #292929;
+    transition: all 0.5s ease-in-out;
+  }
+  .header .nav-menu_open {
+    right: 0;
+  }
+}
+
+.header .nav-menu .logo {
+  display: none;
+}
+
+@media screen and (max-width: 767.5px) {
+  .header .nav-menu .logo {
+    width: 190px;
+    display: block;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+}
+
+.header .nav-menu__list {
+  display: flex;
+  justify-content: "";
+  align-items: "";
+  gap: 35px;
+  margin: 0 2px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header .nav-menu__list {
+    margin: -1px 2px 0 0;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .header .nav-menu__list {
+    margin-top: -60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.header .nav-menu__item_active, .header .nav-menu__item:hover {
+  color: #fafafa;
+}
+
+.header .nav-menu__item_active {
+  border-bottom: 3px solid #f1cdb3;
+}
+
+@media screen and (max-width: 767.5px) {
+  .nav-menu__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
