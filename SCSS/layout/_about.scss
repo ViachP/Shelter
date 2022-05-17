@@ -1,0 +1,71 @@
+.about {
+  margin-bottom: 90px;
+
+  @media screen and (max-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 42.4px;
+  }
+}
+
+.about {
+  .container {
+    @include flex(center, "", 120px);
+
+    @media screen and (max-width: $content-width) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 55px;
+    }
+
+    @media screen and (max-width: 500px) {
+      gap: 19px;
+    }
+  }
+
+  &__pets {
+    max-width: 300px;
+    max-height: 408px;
+    @media screen and (max-width: 500px) {
+      max-width: 260px;
+      max-height: 353.6px;
+    }
+  }
+
+  .content {
+    @include flex();
+    flex-direction: column;
+    max-width: 430px;
+    padding-top: 14px;
+
+    @media screen and (max-width: 850px) {
+      padding: 0;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      .paragraph-l {
+        text-align: justify;
+      }
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      max-width: 270px;
+    }
+  }
+
+  .heading {
+    color: $color-dark-l;
+    margin-bottom: 25px;
+  }
+
+  .subheading {
+    color: $color-dark-xl;
+    margin-bottom: 25px;
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 22px;
+    }
+  }
+}
