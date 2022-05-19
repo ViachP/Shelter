@@ -112,7 +112,7 @@ h3 {
   line-height: 45px;
 }
 
-@media screen and (max-width: 767.5px) {
+@media screen and (max-width: 768px) {
   .h3-mobile {
     font-size: 2.5rem;
     font-style: normal;
@@ -167,16 +167,6 @@ h5 {
   line-height: 150%;
 }
 
-@media screen and (max-width: 767.5px) {
-  .paragraph-mobile-menu {
-    font-size: 3.2rem;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 160%;
-    font-family: "Arial", sans-serif;
-  }
-}
-
 .logo__title {
   font-size: 3.2rem;
   font-style: normal;
@@ -191,29 +181,6 @@ h5 {
   font-style: normal;
   font-weight: normal;
   line-height: 15px;
-}
-
-@media screen and (max-width: 500px) {
-  .credit-card {
-    font-size: 15px;
-    line-height: 110%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .help__item-title {
-    font-size: 15px;
-    line-height: 110%;
-  }
-}
-
-@media screen and (max-width: 1279.5px) {
-  .pets-card__description {
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 110%;
-  }
 }
 
 html {
@@ -257,13 +224,13 @@ body {
   margin: 0 40px;
 }
 
-@media screen and (max-width: 1279.5px) {
+@media screen and (max-width: 1280px) {
   .wrapper {
     margin: 0 30px;
   }
 }
 
-@media screen and (max-width: 767.5px) {
+@media screen and (max-width: 768px) {
   .wrapper {
     margin: 0 10px;
   }
@@ -314,7 +281,7 @@ body {
   color: #cdcdcd;
 }
 
-@media screen and (max-width: 767.5px) {
+@media screen and (max-width: 768px) {
   .header {
     width: calc(100% - 63px);
   }
@@ -330,7 +297,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767.5px) {
+@media screen and (max-width: 768px) {
   .header .burger {
     display: block;
     position: relative;
@@ -377,7 +344,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767.5px) {
+@media screen and (max-width: 768px) {
   .header .nav-menu {
     position: fixed;
     top: 0;
@@ -398,7 +365,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 767.5px) {
+@media screen and (max-width: 768px) {
   .header .nav-menu .logo {
     width: 190px;
     display: block;
@@ -421,7 +388,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767.5px) {
+@media screen and (max-width: 768px) {
   .header .nav-menu__list {
     margin-top: -60px;
     flex-direction: column;
@@ -438,7 +405,7 @@ body {
   border-bottom: 3px solid #f1cdb3;
 }
 
-@media screen and (max-width: 767.5px) {
+@media screen and (max-width: 768px) {
   .nav-menu__container {
     height: 100%;
     display: flex;
