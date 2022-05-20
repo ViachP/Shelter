@@ -1,0 +1,216 @@
+.footer {
+  background: radial-gradient(
+      110.67% 538.64% at 5.73% 50%,
+      #513d2f 0%,
+      #1a1a1c 100%
+    ),
+    #211f20;
+  padding-top: 41px;
+
+  @media screen and (max-width: 850px) {
+    padding-top: 30px;
+  }
+
+  .container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 300px 320px 300px;
+    grid-template-areas: "contacts location puppy";
+
+    @media screen and (max-width: $content-width) {
+      grid-template-rows: 234px 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "contacts location"
+        "puppy    puppy";
+      justify-items: center;
+      column-gap: 60px;
+      row-gap: 65px;
+    }
+
+    @media screen and (max-width: 850px) {
+      padding: 0;
+      margin: 0 64px;
+      column-gap: 40px;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      grid-template-rows: 208px 222px 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "contacts "
+        "location"
+        "puppy ";
+      row-gap: 40px;
+      column-gap: 0;
+      margin: 0 10px;
+    }
+  }
+
+  .contacts,
+  .locations {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    margin-top: 15px;
+    max-height: 234px;
+    max-width: 93.75vw;
+
+    @media screen and (max-width: 850px) {
+      margin: 0;
+      gap: 42px;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      align-items: center;
+    }
+  }
+
+  .contacts {
+    grid-area: contacts;
+    max-width: 300px;
+  }
+
+  .locations {
+    grid-area: location;
+    gap: 33px;
+    max-width: 305px;
+    max-height: 218px;
+
+    @media screen and (max-width: 850px) {
+      gap: 32px;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      align-items: normal;
+    }
+
+    @media screen and (max-width: 500px) {
+      @include flex(space-between, flex-start);
+      .address {
+        margin-left: 1px;
+      }
+    }
+
+    .title {
+      margin-left: -1px;
+      @media screen and (max-width: $mobile-width) {
+        max-width: 270px;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__puppy {
+    max-width: 300px;
+    grid-area: puppy;
+
+    @media screen and (max-width: 990px) {
+      grid-column-start: span 2;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-width: 260px;
+    }
+  }
+
+  .title {
+    color: $color-light-xl;
+  }
+
+  .mail,
+  .phone,
+  .boston,
+  .london {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: $mobile-width) {
+      justify-content: center;
+    }
+  }
+
+  .boston {
+    @media screen and (max-width: $mobile-width) {
+      margin: -2px -2px 0 0;
+    }
+  }
+
+  .mail__address-text,
+  .phone__number-text,
+  .address {
+    color: $color-primary;
+    position: relative;
+  }
+
+  .locations__icon {
+    width: 22px;
+    height: 32px;
+  }
+}
+
+.mail__address-text,
+.phone__number-text {
+  padding-left: 60px;
+
+  &:before {
+    content: "";
+    width: 40px;
+    height: 32px;
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+.mail__address-text {
+  @media screen and (max-width: $mobile-width) {
+    margin-top: 2px;
+  }
+
+  &:before {
+    background: url("../assets/icons/icon-email.svg") no-repeat;
+    left: -1px;
+    top: -2px;
+
+    @media screen and (max-width: $mobile-width) {
+      top: -4px;
+    }
+  }
+}
+
+.phone__number-text {
+  padding-top: 8px;
+
+  &:before {
+    background: url("../assets/icons/icon-phone.svg") no-repeat;
+    left: 0;
+    top: 4px;
+
+    @media screen and (max-width: $mobile-width) {
+      top: 2px;
+    }
+  }
+}
+
+.address {
+  padding-left: 40px;
+
+  &:before {
+    content: "";
+    background: url("../assets/icons/icon-marker.svg") no-repeat;
+    width: 40px;
+    height: 32px;
+    display: inline-block;
+    position: absolute;
+    left: -2px;
+    top: 7px;
+  }
+}
+
+.london .address {
+  margin-top: 5px;
+
+  &:before {
+    top: -3px;
+  }
+}
