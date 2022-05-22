@@ -118,3 +118,80 @@ function randomCard(start) {
   }
   return newList;
 }
+
+let slider = document.querySelector(".slider"),
+  petsCards = slider.querySelector(".pets-cards"),
+  arrowLeft = slider.querySelector(".arrow-left"),
+  arrowRight = slider.querySelector(".arrow-right"),
+  itemLeft = slider.querySelector("#item-left"),
+  itemRight = slider.querySelector("#item-right"),
+  itemActive = slider.querySelector("#item-active"),
+  carousel = slider.querySelector("#carousel"),
+  moveLeft = () => {
+    carousel.classList.add("transition-left");
+    arrowLeft.removeEventListener("click", moveLeft);
+    arrowRight.removeEventListener("click", moveRight);
+  },
+  moveRight = () => {
+    carousel.classList.add("transition-right");
+    arrowRight.removeEventListener("click", moveRight);
+    arrowLeft.removeEventListener("click", moveLeft);
+  };
+
+function createListCard(item, boolean) {
+  randomCard(boolean).forEach((pet) => {
+    item.append(createPetCard(listPets[pet], pet));
+  });
+}
+
+(function () {
+  createListCard(itemActive, true);
+  createListCard(itemLeft);
+  createListCard(itemRight);
+})();
+
+arrowLeft.addEventListener("click", moveLeft);
+arrowRight.addEventListener("click", moveRight);
+
+carousel.addEventListener("animationend", function (animationEvent) {
+  if (
+    animationEvent.animationName === "move-left-1card" ||
+    animationEvent.animationName === "move-left-2card" ||
+    animationEvent.animationName === "move-left-3card"
+  ) {
+    itemRight.innerHTML = itemActive.innerHTML;
+    itemActive.innerHTML = itemLeft.innerHTML;
+    itemLeft.innerHTML = "";
+    createListCard(itemLeft);
+    arrowLeft.addEventListener("click", moveLeft);
+    arrowRight.addEventListener("click", moveRight);
+    carousel.classList.remove("transition-left");
+  } else {
+    itemLeft.innerHTML = itemActive.innerHTML;
+    itemActive.innerHTML = itemRight.innerHTML;
+    itemRight.innerHTML = "";
+    createListCard(itemRight);
+    arrowLeft.addEventListener("click", moveLeft);
+    arrowRight.addEventListener("click", moveRight);
+    carousel.classList.remove("transition-right");
+  }
+});
+
+let closeModalWindow = (event) => {
+  let card = document.querySelector(".pets-card_active");
+  let btnClose = card.querySelector(".btn-close-window");
+  if (
+    event.target.classList.contains("shadow") ||
+    event.target.classList.contains("btn-close-window")
+  ) {
+    card.classList.remove("pets-card_active");
+    document.querySelector("body").classList.remove("no-scroll");
+    shadow.classList.add("hidden");
+    card.children[3].classList.add("hidden");
+    shadow.removeEventListener("click", closeModalWindow);
+    btnClose.removeEventListener("click", closeModalWindow);
+    setTimeout(function () {
+      carousel.addEventListener("click", openModalWindow);
+    }, 0);
+  }
+};
