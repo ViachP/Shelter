@@ -195,3 +195,36 @@ let closeModalWindow = (event) => {
     }, 0);
   }
 };
+
+let openModalWindow = (event) => {
+  let card = event.target.closest(".pets-card");
+  let btnClose = card.querySelector(".btn-close-window");
+  if (card) {
+    card.classList.add("pets-card_active");
+    card.children[3].classList.remove("hidden");
+    shadow.classList.remove("hidden");
+    document.querySelector("body").classList.add("no-scroll");
+    carousel.removeEventListener("click", openModalWindow);
+    shadow.addEventListener("click", closeModalWindow);
+    btnClose.addEventListener("click", closeModalWindow);
+    btnClose.classList.remove("hover");
+  }
+};
+
+carousel.addEventListener("click", openModalWindow);
+shadow.addEventListener("mouseover", function (event) {
+  let cardActive = document.querySelector(".pets-card_active");
+  if (!cardActive) {
+    return;
+  }
+  let btnClose = cardActive.querySelector(".btn-close-window");
+  btnClose.classList.add("hover");
+});
+shadow.addEventListener("mouseleave", function (event) {
+  let cardActive = document.querySelector(".pets-card_active");
+  if (!cardActive) {
+    return;
+  }
+  let btnClose = cardActive.querySelector(".btn-close-window");
+  btnClose.classList.remove("hover");
+});
