@@ -228,3 +228,5 @@ shadow.addEventListener("mouseleave", function (event) {
   let btnClose = cardActive.querySelector(".btn-close-window");
   btnClose.classList.remove("hover");
 });
+
+
