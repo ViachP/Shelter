@@ -41,10 +41,10 @@ body {
 
 .wrapper {
   margin: 0 40px;
-  @media screen and (max-width: $content-width) {
+  @media screen and (max-width: $content-width - 0.5px) {
     margin: 0 30px;
   }
-  @media screen and (max-width: $tablet-width) {
+  @media screen and (max-width: $tablet-width - 0.5px) {
     margin: 0 10px;
   }
 }

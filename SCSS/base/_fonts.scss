@@ -41,7 +41,7 @@ h3 {
 }
 
 .h3-mobile {
-  @media screen and (max-width: $tablet-width) {
+  @media screen and (max-width: $tablet-width - 0.5px) {
     @include font(2.5rem, 130%);
     text-align: center;
   }
@@ -79,6 +79,12 @@ h5 {
   @include font(1.2rem, 150%, normal, italic);
 }
 
+.paragraph-mobile-menu {
+  @media screen and (max-width: $tablet-width - 0.5px) {
+    @include font(3.2rem, 160%);
+    font-family: "Arial", sans-serif;
+  }
+}
 
 .logo__title {
   @include font(3.2rem, 110%);
@@ -90,3 +96,25 @@ h5 {
   @include font(1.3rem, 15px);
 }
 
+.credit-card {
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+    line-height: 110%;
+  }
+}
+
+.help__item-title {
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+    line-height: 110%;
+  }
+}
+
+.modal-window {
+}
+
+.pets-card__description {
+  @media screen and (max-width: $content-width - 0.5px) {
+    @include font(1.3rem, 110%);
+  }
+}
