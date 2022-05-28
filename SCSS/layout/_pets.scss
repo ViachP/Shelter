@@ -41,11 +41,9 @@
 }
 
 .arrow-left {
-  color: #000; // !!!!!!!!!!!!!!!!
 }
 
 .switch {
-  color: #000; // !!!!!!!!!!!!!!!!
 }
 
 .pets-container {
@@ -67,13 +65,13 @@
   position: relative;
   left: -1080px;
 
-  @media screen and (max-width: $content-width) {
+  @media screen and (max-width: $content-width - 0.5px) {
     gap: 39px;
     justify-content: space-evenly;
     left: 0;
   }
 
-  @media screen and (max-width: $tablet-width) {
+  @media screen and (max-width: $tablet-width - 0.5px) {
     justify-content: center;
   }
 
@@ -81,7 +79,7 @@
     @include flex(center, center, 90px);
     cursor: pointer;
     min-width: 990px;
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       gap: 39px;
     }
   }
@@ -96,13 +94,13 @@
     border-radius: 9px;
     cursor: pointer;
 
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       &:last-child {
         display: none;
       }
     }
 
-    @media screen and (max-width: $tablet-width) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       &:nth-last-child(2) {
         display: none;
       }
@@ -124,12 +122,10 @@
 
     // .pets-card__photo
     &__photo {
-      color: #000; // !!!!!!!!!!!!!!!!
     }
 
     // .pets-card__title
     &__title {
-      color: #000; // !!!!!!!!!!!!!!!!
     }
 
     .button {
@@ -153,12 +149,12 @@
   z-index: 5;
   cursor: default;
 
-  @media screen and (max-width: $content-width) {
+  @media screen and (max-width: $content-width - 0.5px) {
     width: 630px;
     height: 350px;
   }
 
-  @media screen and (max-width: $tablet-width) {
+  @media screen and (max-width: $tablet-width - 0.5px) {
     width: 240px;
   }
 
@@ -171,17 +167,17 @@
     bottom: 0;
     color: $color-dark;
     background: $color-light-s;
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       gap: 11px;
     }
   }
 
   &__content {
     margin-right: 20px;
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       margin-right: 10px;
     }
-    @media screen and (max-width: $tablet-width) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       margin: 10px;
     }
   }
@@ -198,7 +194,7 @@
     @extend %transition;
     cursor: pointer;
 
-    @media screen and (max-width: $tablet-width) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       right: -30px;
     }
 
@@ -234,11 +230,11 @@
     width: 500px;
     height: 500px;
     border-radius: 9px 0 0 9px;
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       width: 350px;
       height: 350px;
     }
-    @media screen and (max-width: $tablet-width) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       display: none;
     }
   }
@@ -247,21 +243,21 @@
     color: $color-dark;
     margin-top: 50px;
     margin-bottom: 10px;
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       margin-top: 10px;
     }
   }
 
   .pets-card__breed {
     margin-bottom: 40px;
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       margin-bottom: 20px;
     }
   }
 
   .pets-card__description {
     margin-bottom: 40px;
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       margin-bottom: 20px;
     }
   }
@@ -270,7 +266,7 @@
     margin-bottom: 10px;
     position: relative;
     padding-left: 15px;
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       margin-bottom: 5px;
     }
 
@@ -291,7 +287,6 @@
   }
 
   .pets-card__extra-description {
-    color: #000; // !!!!!!!!!!!!!!!!
   }
 }
 
@@ -354,12 +349,12 @@
     animation-name: move-right-3card;
     animation-duration: $animation-duration;
   }
-  @media screen and (max-width: $content-width) {
+  @media screen and (max-width: $content-width - 0.5px) {
     animation-name: move-right-2card;
     animation-duration: $animation-duration;
   }
 
-  @media screen and (max-width: $tablet-width) {
+  @media screen and (max-width: $tablet-width - 0.5px) {
     animation-name: move-right-1card;
     animation-duration: $animation-duration;
   }
@@ -370,12 +365,12 @@
     animation-name: move-left-3card;
     animation-duration: $animation-duration;
   }
-  @media screen and (max-width: $content-width) {
+  @media screen and (max-width: $content-width - 0.5px) {
     animation-name: move-left-2card;
     animation-duration: $animation-duration;
   }
 
-  @media screen and (max-width: $tablet-width) {
+  @media screen and (max-width: $tablet-width - 0.5px) {
     animation-name: move-left-1card;
     animation-duration: $animation-duration;
   }

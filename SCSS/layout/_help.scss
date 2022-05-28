@@ -1,82 +1,82 @@
 .help {
-    .content {
-      margin-top: 80px;
-      margin-bottom: 100px;
-      @include flex('', center);
-      flex-direction: column;
-  
-      @media screen and (max-width: 500px) {
-        margin-top: 40px;
-        margin-bottom: 42px;
-      }
-    }
-  
-    .heading {
-      max-width: 310px;
-      color: $color-dark-l;
-      margin-bottom: 60px;
-      text-align: center;
-  
-      @media screen and (max-width: 500px) {
-        max-width: 250px;
-        margin-bottom: 42px;
-      }
-    }
-  
-    &__list {
-      @include flex(center);
-      column-gap: 120px;
-      row-gap: 55px;
-      flex-wrap: wrap;
-      max-width: 1030px;
-  
-      @media screen and (max-width: 1270px) {
-        margin: 0 15px;
-      }
-  
-      @media screen and (max-width: 850px) {
-        column-gap: 60px;
-      }
-  
-      @media screen and (max-width: 500px) {
-        gap: 30px;
-        margin: 0 0 0 5px;
-        justify-content: flex-start;
-      }
-    }
-  
-    &__item {
-      @include flex('',center);
-      flex-direction: column;
-  
-      @media screen and (max-width: 1270px) {
-        width: 170px;
-      }
-  
-      @media screen and (max-width: 500px) {
-        width: 130px;
-        height: 87px;
-      }
-    }
-  
-    &__item-icon {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 30px;
-  
-      @media screen and (max-width: 500px) {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 20px;
-      }
-    }
-  
-    &__item-title {
-      color: $color-dark-l;
-  
-      @media screen and (max-width: 500px) {
-        font-size: 15px;
-        line-height: 110%;
-      }
+  .content {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    @include flex("", center);
+    flex-direction: column;
+
+    @media screen and (max-width: 500px) {
+      margin-top: 40px;
+      margin-bottom: 42px;
     }
   }
+
+  .heading {
+    max-width: 310px;
+    color: $color-dark-l;
+    margin-bottom: 60px;
+    text-align: center;
+
+    @media screen and (max-width: 500px) {
+      max-width: 250px;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__list {
+    @include flex(center);
+    column-gap: 120px;
+    row-gap: 55px;
+    flex-wrap: wrap;
+    max-width: 1030px;
+
+    @media screen and (max-width: 1270px) {
+      margin: 0 15px;
+    }
+
+    @media screen and (max-width: 850px) {
+      column-gap: 60px;
+    }
+
+    @media screen and (max-width: 500px) {
+      gap: 30px;
+      margin: 0 0 0 5px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    @include flex("", center);
+    flex-direction: column;
+
+    @media screen and (max-width: 1270px) {
+      width: 170px;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 130px;
+      height: 87px;
+    }
+  }
+
+  &__item-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 500px) {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-title {
+    color: $color-dark-l;
+
+    @media screen and (max-width: 500px) {
+      font-size: 15px;
+      line-height: 110%;
+    }
+  }
+}

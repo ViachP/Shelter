@@ -16,7 +16,7 @@
   &__container {
     @include flex(space-between);
 
-    @media screen and (max-width: $content-width) {
+    @media screen and (max-width: $content-width - 0.5px) {
       flex-direction: column;
       gap: 100px;
       align-items: center;
@@ -33,11 +33,11 @@
       .heading {
         color: $color-light-xl;
         letter-spacing: 0;
-        @media screen and (max-width: $content-width) {
+        @media screen and (max-width: $content-width - 0.5px) {
           margin-left: -153px;
         }
 
-        @media screen and (max-width: $tablet-width) {
+        @media screen and (max-width: $tablet-width - 0.5px) {
           margin-left: 0;
         }
 
@@ -55,7 +55,7 @@
         }
       }
 
-      @media screen and (max-width: $content-width) {
+      @media screen and (max-width: $content-width - 0.5px) {
         margin: 0;
         @include flex("", center);
         flex-direction: column;
@@ -74,7 +74,7 @@
       max-height: 593px;
     }
 
-    @media screen and (max-width: $tablet-width) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       margin-left: 15px;
     }
 
